@@ -10,6 +10,6 @@ accnt1.deposit(deposit_value)
 accnt1.withdraw(withdraw_value)
 
 To check account information:
-print(accnt1) (prints out owner and balance)
+print(accnt1) (prints out owner and balance)/n
 accnt1.owner (checks only owner name)
 accnt1.balance (checks only balance corresponding to accnt1)
