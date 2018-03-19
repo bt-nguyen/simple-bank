@@ -1,3 +1,2 @@
 # simple-bank
-simple bank account that takes deposits and withdrawals
-developed in python
+simple bank account in python
