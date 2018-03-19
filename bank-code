@@ -1,0 +1,44 @@
+# Develop a simple bank account that has the requirements of:
+# (1) Ability to withdraw and deposit values
+# (2) Withdrawals cannot exceed available balance
+
+## DIRECTIONS
+
+# Create an account: accnt1 = Account('Name',balance)
+# Deposit a value: accnt1.deposit(value)
+# Withdraw a value: accnt1.withdraw(value)
+# Print out information: print(accnt1)
+
+class Account():
+    
+    ## ATTRIBUTES
+    
+    def __init__(self,owner,balance):
+
+        self.owner = owner
+        self.balance = balance
+
+        
+    ## METHODS
+    
+    def deposit(self,d_amt):
+        
+        self.balance = self.balance + d_amt
+        print(f'Deposited {d_amt} to the current balance.')
+    
+    def withdraw(self,w_amt):
+    
+    # The if statement below restricts withdrawals to not exceed available balance
+        
+        if self.balance >= w_amt:
+            self.balance = self.balance - w_amt
+            print(f'Withdrew {w_amt} to the current balance.')
+            
+        else:
+            print('Requested withdrawal exceeds current balance.')
+            
+    # Create f-string literal to return owner name and balance
+            
+    def __str__(self):
+        
+        return f'Owner: {self.owner} \nBalance: {self.balance}'
